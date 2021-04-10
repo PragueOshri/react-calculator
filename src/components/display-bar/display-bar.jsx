@@ -13,6 +13,7 @@ class DisplayBar extends Component {
           className="input"
           type="text"
           value={this.props.currentEquation}
+          readOnly={true}
         ></input>
         {this.props.result}
       </div>
