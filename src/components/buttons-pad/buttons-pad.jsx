@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Button from "../button/button.jsx";
 import DisplayBar from "../display-bar/display-bar";
 
+import './buttons-pad.scss';
+
 class ButtonsPad extends Component {
   constructor(props) {
     super(props);
@@ -89,11 +91,6 @@ class ButtonsPad extends Component {
   };
 
   render() {
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap"
-      rel="stylesheet"
-    ></link>;
-
     const buttons = [
       { symbol: "C", cols: 4, action: this.reset },
 
@@ -117,7 +114,6 @@ class ButtonsPad extends Component {
 
     return (
       <div>
-        Buttons-Pad
         <div className="displayBarWrapper">
           <DisplayBar
             currentEquation={this.state.currentEquation}

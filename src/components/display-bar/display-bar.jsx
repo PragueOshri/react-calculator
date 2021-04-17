@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./display-bar.css";
+import "./display-bar.scss";
 
 class DisplayBar extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class DisplayBar extends Component {
           type="text"
           value={this.props.currentEquation}
           readOnly={true}
-        ></input>
+        />
         {this.props.result}
       </div>
     );
