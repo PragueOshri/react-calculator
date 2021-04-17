@@ -3,6 +3,7 @@ import ButtonsPad from "../buttons-pad/buttons-pad";
 import DisplayBar from "../display-bar/display-bar";
 import {ButtonSymbol, Operation} from "../../types";
 import "./calculator.scss";
+import ClearButton from "../clear-button/clear-button";
 
 type CalculatorState = {
     currentEquation: string;
@@ -81,9 +82,9 @@ class Calculator extends Component<{}, CalculatorState> {
         const firstNumber = Number(num1);
         const secondNumber = Number(num2);
         switch (operation) {
-            case "X":
+            case 'x':
                 return firstNumber * secondNumber;
-            case "/":
+            case "÷":
                 return firstNumber / secondNumber;
             case "+":
                 return firstNumber + secondNumber;
@@ -101,9 +102,11 @@ class Calculator extends Component<{}, CalculatorState> {
                         currentEquation={this.state.currentEquation}
                         result={this.state.result}
                     />
+                    <div className="clearButtonWrapper">
+                        <ClearButton onClick={this.reset} />
+                    </div>
                 </div>
                 <ButtonsPad
-                    onClearClick={this.reset}
                     onNumberClick={this.concatNumToCur}
                     onOperationClick={this.concatOpToCur}
                     onResultClick={this.printResult}

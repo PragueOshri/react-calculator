@@ -1,6 +1,20 @@
+@import 'src/styles/colors';
+
 .calculatorWrapper {
-  margin: 5% 15%;
-  border: 1px solid;
-  background-color: lightcyan;
+  margin: 5% 20%;
+  background-color: $calculatorBackground;
   padding: 10px;
+  box-sizing: border-box;
+}
+
+.displayBarWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.clearButtonWrapper {
+  height: 100%;
 }

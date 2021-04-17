@@ -1,7 +1,9 @@
 .buttonsWrapper {
-  border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  height: 375px;
-  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 15px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-rows: repeat(5, 75px);
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 7px;
 }

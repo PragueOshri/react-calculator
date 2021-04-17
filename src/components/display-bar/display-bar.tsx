@@ -9,14 +9,9 @@ type DisplayBarProps = {
 class DisplayBar extends Component<DisplayBarProps> {
     render() {
         return (
-            <div>
-                <input
-                    className="input"
-                    type="text"
-                    value={this.props.currentEquation}
-                    readOnly={true}
-                />
-                {this.props.result}
+            <div className="displayContentWrapper">
+                <span className="equation">{this.props.currentEquation}</span>
+                <span className="result">{this.props.result}</span>
             </div>
         );
     }

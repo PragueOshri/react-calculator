@@ -1,0 +1,19 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/fonts.scss';
+
+body {
+  box-sizing: border-box !important;
+  background-color: $calculatorBackground;
+  font-family: $calculatorFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  * {
+    box-sizing: border-box !important;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
