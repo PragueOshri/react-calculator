@@ -1,13 +1,17 @@
 import React, {Component} from "react";
-import Button from "../button/button.tsx";
+import Button from "../button/button";
+import {ButtonAction, ButtonType} from "../../types";
 import './buttons-pad.scss';
 
-class ButtonsPad extends Component {
-    constructor(props) {
-        super(props);
-    }
+type ButtonPadProps = {
+    onNumberClick: ButtonAction;
+    onClearClick: ButtonAction;
+    onResultClick: ButtonAction;
+    onOperationClick: ButtonAction;
+};
 
-    buttons = [
+class ButtonsPad extends Component<ButtonPadProps> {
+    private buttons: ButtonType[] = [
         {symbol: "C", cols: 4, action: this.props.onClearClick},
         {symbol: "7", cols: 1, action: this.props.onNumberClick},
         {symbol: "8", cols: 1, action: this.props.onNumberClick},
@@ -28,7 +32,6 @@ class ButtonsPad extends Component {
     ];
 
     render() {
-
         return (
             <div className="buttonsWrapper">
                 {this.buttons.map((btn) => (
@@ -36,12 +39,12 @@ class ButtonsPad extends Component {
                         key={btn.symbol}
                         symbol={btn.symbol}
                         cols={btn.cols}
-                        action={(symbol) => btn.action(symbol)}
+                        action={btn.action}
                     />
                 ))}
             </div>
         );
-    }
+    };
 }
 
 export default ButtonsPad;

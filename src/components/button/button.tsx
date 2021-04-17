@@ -1,14 +1,9 @@
 import React, {Component} from "react";
+import {ButtonType} from "../../types";
 import './button.scss';
 import classnames from "classnames";
 
-interface ButtonProps {
-    symbol: string;
-    cols: number;
-    action: (symbol?: string) => void;
-}
-
-class Button extends Component<ButtonProps> {
+class Button extends Component<ButtonType> {
     render() {
         return (
             <button
