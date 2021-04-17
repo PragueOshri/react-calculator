@@ -1,0 +1,12 @@
+@import 'src/styles/colors';
+
+.calculatorButton.clear {
+  width: 105px;
+  height: 100%;
+  margin-left: 8px;
+  background-color: $clearButtonBackground;
+
+  &:hover {
+    background-color: darken($clearButtonBackground, 10);
+  }
+}

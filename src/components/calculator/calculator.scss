@@ -6,3 +6,15 @@
   padding: 10px;
   box-sizing: border-box;
 }
+
+.displayBarWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.clearButtonWrapper {
+  height: 100%;
+}

@@ -34,12 +34,4 @@
             background-color: darken($resultButtonBackground, 10);
         }
     }
-
-    &.clear {
-        background-color: $clearButtonBackground;
-
-        &:hover {
-            background-color: darken($clearButtonBackground, 10);
-        }
-    }
 }

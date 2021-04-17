@@ -1,28 +1,26 @@
-.displayBarWrapper {
-  .displayContentWrapper {
-    background-color: #ffe;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    padding: 5px 10px;
-    border-radius: 8px;
+.displayContentWrapper {
+  background-color: #ffe;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  border-radius: 8px;
 
-    .text {
-      font-size: 24px;
-      letter-spacing: 00.1rem;
-      color: #282c34;
-      text-align: left;
-    }
+  .text {
+    font-size: 24px;
+    letter-spacing: 00.1rem;
+    color: #282c34;
+    text-align: left;
+  }
 
-    .equation {
-      @extend .text;
-    }
+  .equation {
+    @extend .text;
+  }
 
-    .result {
-      @extend .text;
-      margin-top: 10px;
-      font-size: 36px;
-    }
+  .result {
+    @extend .text;
+    margin-top: 10px;
+    font-size: 36px;
   }
 }

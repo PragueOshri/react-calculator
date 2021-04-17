@@ -5,7 +5,6 @@ import './buttons-pad.scss';
 
 type ButtonPadProps = {
     onNumberClick: ButtonAction;
-    onClearClick: ButtonAction;
     onResultClick: ButtonAction;
     onOperationClick: ButtonAction;
 };
@@ -30,9 +29,7 @@ class ButtonsPad extends Component<ButtonPadProps> {
         {symbol: ".", type: 'number', action: this.props.onNumberClick},
         {symbol: "0", type: 'number', action: this.props.onNumberClick},
         {symbol: "=", type: 'result', action: this.props.onResultClick},
-        {symbol: "÷", type: 'operator', action: this.props.onOperationClick},
-
-        {symbol: "C", type: 'clear', action: this.props.onClearClick},
+        {symbol: "÷", type: 'operator', action: this.props.onOperationClick}
     ];
 
     render() {
