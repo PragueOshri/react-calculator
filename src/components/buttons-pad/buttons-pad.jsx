@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Button from "../button/button.jsx";
+import Button from "../button/button.tsx";
 import './buttons-pad.scss';
 
 class ButtonsPad extends Component {
