@@ -81,9 +81,9 @@ class Calculator extends Component<{}, CalculatorState> {
         const firstNumber = Number(num1);
         const secondNumber = Number(num2);
         switch (operation) {
-            case "X":
+            case 'x':
                 return firstNumber * secondNumber;
-            case "/":
+            case "÷":
                 return firstNumber / secondNumber;
             case "+":
                 return firstNumber + secondNumber;

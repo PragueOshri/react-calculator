@@ -7,7 +7,7 @@ class Button extends Component<ButtonType> {
     render() {
         return (
             <button
-                className={classnames("calc-button", `column-${this.props.cols}`)}
+                className={classnames("calculatorButton", `column-${this.props.cols}`)}
                 onClick={() => this.props.action(this.props.symbol)}
             >
                 {this.props.symbol}
