@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './button.scss';
 import classnames from "classnames";
 
 class Button extends Component {
