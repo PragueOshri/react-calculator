@@ -12,17 +12,34 @@
     border: none;
     outline: none;
     background-color: $buttonBackground;
+    transition: background-color .2s ease-out;
 
     &:hover {
-        color: #ffe;
-        background-color: darken($buttonBackground, 5);
+        cursor: pointer;
+        background-color: darken($buttonBackground, 10);
     }
 
-    &.column-4 {
+    &.operator {
         background-color: $operationButtonBackground;
 
         &:hover {
-            background-color: darken($operationButtonBackground, 5);
+            background-color: darken($operationButtonBackground, 10);
+        }
+    }
+
+    &.result {
+        background-color: $resultButtonBackground;
+
+        &:hover {
+            background-color: darken($resultButtonBackground, 10);
+        }
+    }
+
+    &.clear {
+        background-color: $clearButtonBackground;
+
+        &:hover {
+            background-color: darken($clearButtonBackground, 10);
         }
     }
 }

@@ -1,8 +1,9 @@
+@import 'src/styles/colors.scss';
 @import 'src/styles/fonts.scss';
 
 body {
   box-sizing: border-box !important;
-  background-color: #282c34;
+  background-color: $calculatorBackground;
   font-family: $calculatorFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

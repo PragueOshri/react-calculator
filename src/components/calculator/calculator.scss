@@ -1,6 +1,8 @@
+@import 'src/styles/colors';
+
 .calculatorWrapper {
   margin: 5% 20%;
-  background-color: #282c34;
+  background-color: $calculatorBackground;
   padding: 10px;
   box-sizing: border-box;
 }
