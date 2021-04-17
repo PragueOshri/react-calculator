@@ -1,36 +1,49 @@
 import React, {Component} from "react";
 import Button from "../button/button";
-import {ButtonAction, ButtonObject} from "../../types";
+import {ButtonAction, ButtonObject, ButtonType} from "../../types";
 import './buttons-pad.scss';
 
 type ButtonPadProps = {
     onNumberClick: ButtonAction;
     onResultClick: ButtonAction;
-    onOperationClick: ButtonAction;
+    onOperatorClick: ButtonAction;
 };
 
 class ButtonsPad extends Component<ButtonPadProps> {
-    private buttons: ButtonObject[] = [
-        {symbol: "7", type: 'number', action: this.props.onNumberClick},
-        {symbol: "8", type: 'number', action: this.props.onNumberClick},
-        {symbol: "9", type: 'number', action: this.props.onNumberClick},
-        {symbol: "+", type: 'operator', action: this.props.onOperationClick},
+    buttons: Pick<ButtonObject, 'symbol' | 'type'>[] = [
+        {symbol: "7", type: 'number'},
+        {symbol: "8", type: 'number'},
+        {symbol: "9", type: 'number'},
+        {symbol: "+", type: 'operator'},
 
-        {symbol: "4", type: 'number', action: this.props.onNumberClick},
-        {symbol: "5", type: 'number', action: this.props.onNumberClick},
-        {symbol: "6", type: 'number', action: this.props.onNumberClick},
-        {symbol: "-", type: 'operator', action: this.props.onOperationClick},
+        {symbol: "4", type: 'number'},
+        {symbol: "5", type: 'number'},
+        {symbol: "6", type: 'number'},
+        {symbol: "-", type: 'operator'},
 
-        {symbol: "1", type: 'number', action: this.props.onNumberClick},
-        {symbol: "2", type: 'number', action: this.props.onNumberClick},
-        {symbol: "3", type: 'number', action: this.props.onNumberClick},
-        {symbol: "x", type: 'operator', action: this.props.onOperationClick},
+        {symbol: "1", type: 'number'},
+        {symbol: "2", type: 'number'},
+        {symbol: "3", type: 'number'},
+        {symbol: "x", type: 'operator'},
 
-        {symbol: ".", type: 'number', action: this.props.onNumberClick},
-        {symbol: "0", type: 'number', action: this.props.onNumberClick},
-        {symbol: "=", type: 'result', action: this.props.onResultClick},
-        {symbol: "÷", type: 'operator', action: this.props.onOperationClick}
+        {symbol: ".", type: 'number'},
+        {symbol: "0", type: 'number'},
+        {symbol: "=", type: 'result'},
+        {symbol: "÷", type: 'operator'}
     ];
+
+    getButtonAction = (type: ButtonType): ButtonAction => {
+        switch (type) {
+            case 'number':
+                return this.props.onNumberClick;
+            case 'operator':
+                return this.props.onOperatorClick;
+            case 'result':
+                return this.props.onResultClick;
+            default:
+                return () => {};
+        }
+    };
 
     render() {
         return (
@@ -40,7 +53,7 @@ class ButtonsPad extends Component<ButtonPadProps> {
                         key={button.symbol}
                         symbol={button.symbol}
                         type={button.type}
-                        action={button.action}
+                        action={this.getButtonAction(button.type)}
                     />
                 ))}
             </div>

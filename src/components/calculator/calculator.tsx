@@ -33,7 +33,7 @@ class Calculator extends Component<{}, CalculatorState> {
         this.setState(this.getInitialState());
     };
 
-    concatNumToCur = (symbol: string): void => {
+    concatNumberToCurrentEquation = (symbol: string): void => {
         this.setState({
             currentNum: this.state.currentNum
                 ? this.state.currentNum + symbol
@@ -44,7 +44,7 @@ class Calculator extends Component<{}, CalculatorState> {
         });
     };
 
-    concatOpToCur = (symbol: ButtonSymbol): void => {
+    concatOperatorToCurrentEquation = (symbol: ButtonSymbol): void => {
         this.setState({
             currentEquation: this.state.currentEquation + symbol,
             operations: [...this.state.operations, symbol as Operation],
@@ -107,8 +107,8 @@ class Calculator extends Component<{}, CalculatorState> {
                     </div>
                 </div>
                 <ButtonsPad
-                    onNumberClick={this.concatNumToCur}
-                    onOperationClick={this.concatOpToCur}
+                    onNumberClick={this.concatNumberToCurrentEquation}
+                    onOperatorClick={this.concatOperatorToCurrentEquation}
                     onResultClick={this.printResult}
                 />
             </div>
